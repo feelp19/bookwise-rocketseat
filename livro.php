@@ -1,3 +1,18 @@
+<?php
+
+require 'dados.php';
+
+$id = $_REQUEST['id'];
+$livroFiltrado = array_filter($livros, fn($l) => $l['id'] == $id);
+
+$livro = array_pop($livroFiltrado);
+
+
+echo "<pre>";
+var_dump($_SERVER);
+echo "</pre>";
+?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -22,7 +37,21 @@
 </header>
 
 <main class="mx-auto max-w-screen-lg space-y-6">
-
+    <?=$livro['titulo']?>
+    <div class="bg-stone-900 p-2 rounded border-stone-800 border-2">
+        <div class="flex">
+            <div class="w-1/3">imagem</div>
+            <div class="space-y-1">
+                <a class="font-semibold hover:underline"
+                   href="/livro.php?id=<?= $livro['id'] ?>"><?= $livro['titulo'] ?></a>
+                <div class="text-xs italic"><?= $livro['autor'] ?></div>
+                <div class="text-xs italic">⭐⭐⭐</div>
+            </div>
+        </div>
+        <div class="text-sm mt-2">
+            <?= $livro['descricao'] ?>
+        </div>
+    </div>
 </main>
 </body>
 </html>
