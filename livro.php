@@ -10,8 +10,8 @@ $livro = array_pop($livroFiltrado);
 $view = "livro";
 require "views/template/app.php";
 
-//echo "<pre>";
-//var_dump($_SERVER);
-//echo "</pre>";
+
 ?>
 
+//controller, pois esta manipulando os valores para a view exibir
+//pelo array_filter e pelo array_filtrado
