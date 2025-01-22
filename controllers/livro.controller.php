@@ -6,5 +6,4 @@ $livroFiltrado = array_filter($livros, fn($l) => $l['id'] == $id); //filtra os v
 
 $livro = array_pop($livroFiltrado); //pega o primeiro valor do array, referente a condicao atendida
 
-$view = 'livro';
-require "views/template/app.php";
+view('livro');
