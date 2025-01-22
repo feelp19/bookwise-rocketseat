@@ -1,6 +1,5 @@
 <?php
 
-
 $controller = str_replace('/', '', parse_url($_SERVER['REQUEST_URI'])['path']); //pega o path do arquivo
 if (!$controller) $controller = 'index'; //verifica se existe, se nao existir, atribui ao index
 

@@ -2,6 +2,5 @@
 
 require 'dados.php';
 
-$id = $_REQUEST['id'];
 
-view('index');
+view('index', compact('livros'));

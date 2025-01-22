@@ -12,11 +12,11 @@
         <div class="font-bold text-xl tracking-wide">Book Wise</div>
         <ul class="flex items-center justify-between gap-x-2 font-bold">
             <li><a href="/" class="hover:underline text-lime-500">Explorar</a></li>
-            <li><a href="/meus-livros.php" class="hover:underline">Meus Livros</a></li>
+            <li><a href="/meus-livros" class="hover:underline">Meus Livros</a></li>
         </ul>
 
         <ul>
-            <li><a href="/login.php" class="hover:underline">Fazer Login</a></li>
+            <li><a href="/login" class="hover:underline">Fazer Login</a></li>
         </ul>
     </nav>
 </header>

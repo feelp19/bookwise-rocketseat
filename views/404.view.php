@@ -1,1 +1,3 @@
-<h2>Pagina nao existente</h2>
+<h1 class="text-lg font-bold">
+    Pagina nao encontrada
+</h1>
