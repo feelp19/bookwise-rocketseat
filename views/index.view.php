@@ -11,7 +11,7 @@
                 <div class="w-1/3">imagem</div>
                 <div class="space-y-1">
                     <a class="font-semibold hover:underline"
-                       href="/livro.php?id=<?= $livro['id'] ?>"><?= $livro['titulo'] ?></a>
+                       href="/livro?id=<?= $livro['id'] ?>"><?= $livro['titulo'] ?></a>
                     <div class="text-xs italic"><?= $livro['autor'] ?></div>
                     <div class="text-xs italic">⭐⭐⭐</div>
                 </div>
