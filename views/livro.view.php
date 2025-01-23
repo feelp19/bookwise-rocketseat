@@ -6,6 +6,7 @@
             <a class="font-semibold hover:underline"
                href="/livro?id=<?= $livro['id'] ?>"><?= $livro['titulo'] ?></a>
             <div class="text-xs italic"><?= $livro['autor'] ?></div>
+            <div class="text-xs italic semibold"><?=$livro['qtd_paginas']?> Paginas</div>
             <div class="text-xs italic">⭐⭐⭐</div>
         </div>
     </div>
