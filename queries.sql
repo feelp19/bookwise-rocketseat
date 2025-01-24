@@ -77,3 +77,18 @@ and
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- relacao entre tabelas utilizando left join
+select
+    l.titulo
+     , l.autor
+     , l.descricao
+     , l.ano_lancamento
+     , l.usuario_id
+     , u.nome
+     , u.id as usuarios_id
+from
+    livros as l
+left join
+    usuarios as u on u.id = l.usuario_id;
+-- -------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- relacao entre tabelas utilizando right join
