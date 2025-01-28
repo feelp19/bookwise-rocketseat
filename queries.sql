@@ -13,6 +13,17 @@ alter table livros rename nro_paginas to qtd_paginas;
 -- alteracao de tabela adicionando coluna
 alter table livros add ano_lancamento integer;
 
+-- criacao de tabelas com foreign key
+create table livros(
+    id integer primary key,
+    titulo varchar(255),
+    autor varchar(255),
+    descricao text,
+    ano_lancamento integer,
+    usuario_id integer,
+    foreign key(usuario_id) references usuario(id)
+);
+
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 -- ** Convencoes
     -- nomes de tabelas sempre no plural (livro -> livros) *notacao: singular -> plural
@@ -92,3 +103,11 @@ left join
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- relacao entre tabelas utilizando right join
+select
+    l.titulo,
+    l.autor,
+    l.usuario_id,
+    u.nome
+from livros as l
+         right join
+     usuarios as u on u.id = l.usuario_id;
