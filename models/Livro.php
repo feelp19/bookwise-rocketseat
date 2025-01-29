@@ -8,4 +8,15 @@ class Livro
     public $autor;
     public $descricao;
     public $qtd_paginas;
+
+    public static function make($item) //static e criada sem a necessidade de ser criado um objeto
+    {
+        $livro = new self();
+        $livro->id = $item['id'];
+        $livro->titulo = $item['titulo'];
+        $livro->autor = $item['autor'];
+        $livro->descricao = $item['descricao'];
+        $livro->qtd_paginas = $item['qtd_paginas'];
+        return $livro;
+    }
 }
