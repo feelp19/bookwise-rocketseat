@@ -8,6 +8,7 @@ class Livro
     public $autor;
     public $descricao;
     public $qtd_paginas;
+    public $imagem;
 
     public static function make($item) //static e criada sem a necessidade de ser criado um objeto
     {
@@ -17,6 +18,7 @@ class Livro
         $livro->autor = $item['autor'];
         $livro->descricao = $item['descricao'];
         $livro->qtd_paginas = $item['qtd_paginas'];
+        $livro->imagem = $item['path_imagem'];
         return $livro;
     }
 }

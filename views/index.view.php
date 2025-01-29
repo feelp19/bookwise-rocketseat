@@ -8,7 +8,7 @@
     <?php foreach ($livros as $livro) : ?>
         <div class="bg-stone-900 p-2 rounded border-stone-800 border-2">
             <div class="flex">
-                <div class="w-1/3">imagem</div>
+                <div class="w-1/3 px-1 object-cover"><img src="<?=$livro->imagem?>"></div>
                 <div class="space-y-1">
                     <a class="font-semibold hover:underline"
                        href="/livro?id=<?= $livro->id ?>"><?= $livro->titulo ?></a>
